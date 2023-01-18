@@ -10,7 +10,7 @@ export const Home = () => {
 
     const addConcept = () => {
         const concept = window.prompt('Enter a concept');
-        if (!concepts.includes(concept)) {
+        if (concept?.length > 0 && !concepts.includes(concept)) {
             setConcepts([...concepts, concept]);
         }
     }
